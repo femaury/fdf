@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 15:49:58 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/21 15:24:45 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/21 20:30:45 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,34 @@
 # include "../libft/incs/libft.h"
 
 /*
+**	--------------------------------- DEFINES ----------------------------------
+*/
+
+# define WIN_W 1600
+# define WIN_H 900
+# define IMG_W WIN_W
+# define IMG_H WIN_H
+
+/*
 **	-------------------------------- STRUCTURES --------------------------------
 */
 
-typedef struct	s_mlx_ptr
+typedef struct	s_img
+{
+	int				bpp;
+	int				ln_size;
+	int				endian;
+	void			*ptr;
+	unsigned int	*data;
+
+}				t_img;
+
+typedef struct	s_mlx
 {
 	void	*mlx;
 	void	*win;
-}				t_mlx_ptr;
+	t_img	img;
+}				t_mlx;
 
 /*
 **	------------------------------- FDF FUNCTIONS ------------------------------

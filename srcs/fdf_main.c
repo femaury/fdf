@@ -6,32 +6,28 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/21 14:56:14 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/21 15:24:58 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/21 20:21:50 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static int	key_hook(int keycode, void *param)
+static int	key_hook(int keycode, t_mlx *env)
 {
-	t_mlx_ptr	*ptr;
-
-	ptr = (t_mlx_ptr *)param;
-	if (ptr)
-	{
-		if (keycode == ESC_KEY)
-			exit(1);
-	}
+	(void)env;
+	if (keycode == ESC_KEY)
+		exit(1);
 	return (0);
 }
 
 int		main()
 {
-	t_mlx_ptr	ptr;
+	t_mlx	env;
 
-	ptr.mlx = mlx_init();
-	ptr.win = mlx_new_window(ptr.mlx, 1920, 1080, "FDF femaury");
-	mlx_key_hook(ptr.win, key_hook, &ptr);
-	mlx_loop(ptr.mlx);
+	env.mlx = mlx_init();
+	env.win = mlx_new_window(env.mlx, 1920, 1080, "FDF femaury");
+	mlx_string_put(env.mlx, env.win, 20, 20, 0xFFFFFF, "Press <ESC> to quit FDF");
+	mlx_key_hook(env.win, key_hook, &env);
+	mlx_loop(env.mlx);
 	return (0);
 }
