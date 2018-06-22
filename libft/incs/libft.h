@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 15:07:51 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/15 16:34:09 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/22 16:51:03 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 float			ft_sqrt(float nb);
 int				ft_pow(int n, int power);
+int				ft_abs(int nb);
 
 void			ft_setupcase(char *s);
 void			ft_setlowcase(char *s);
