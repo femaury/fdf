@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 15:07:51 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/22 16:51:03 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/23 13:30:29 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 
 # include "ft_gnl.h"
+# include "../ft_printf/incs/libftprintf.h"
 
 typedef struct	s_list
 {

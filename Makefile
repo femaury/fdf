@@ -6,7 +6,7 @@
 #    By: femaury <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 20:03:09 by femaury           #+#    #+#              #
-#    Updated: 2018/06/21 17:21:11 by femaury          ###   ########.fr        #
+#    Updated: 2018/06/23 13:32:23 by femaury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ all:
 	@$(MAKE) $(NAME)
 
 $(NAME): $(OBJ) libft/libft.a
-	@$(CC) $(CFLAGS) -Iincs -o $(NAME) $(OBJ) libft/libft.a minilibx/libmlx.a $(MLXFLAGS)
+	@$(CC) $(CFLAGS) -Iincs -o $(NAME) $(OBJ) libft/libft.a libft/ft_printf/libftprintf.a minilibx/libmlx.a $(MLXFLAGS)
 	@echo "\n[\033[32mOK\033[0m] $(NAME) compiled successfully."
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.c
