@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 15:49:58 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/21 20:30:45 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/25 14:43:50 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,11 +54,14 @@ typedef struct	s_mlx
 {
 	void	*mlx;
 	void	*win;
+	int		**file;
 	t_img	img;
 }				t_mlx;
 
 /*
 **	------------------------------- FDF FUNCTIONS ------------------------------
 */
+
+int				parse_file(t_mlx *env, char *file);
 
 #endif

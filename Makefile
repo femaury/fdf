@@ -6,13 +6,13 @@
 #    By: femaury <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 20:03:09 by femaury           #+#    #+#              #
-#    Updated: 2018/06/23 13:32:23 by femaury          ###   ########.fr        #
+#    Updated: 2018/06/25 14:43:33 by femaury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 SRC_PATH = srcs
-SRC_NAME = fdf_main.c
+SRC_NAME = fdf_main.c fdf_parse_file.c
 OBJ_PATH = objs
 OBJ_NAME = $(SRC_NAME:.c=.o)
 SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))

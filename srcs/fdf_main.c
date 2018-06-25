@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/21 14:56:14 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/23 17:13:59 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/25 14:45:24 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,12 @@ void		put_line_to_image(t_mlx *env, int x0, int y0, int x1, int y1)
 	}
 }
 
-int			main()
+int			main(int ac, char **av)
 {
 	t_mlx	env;
-
+	
+	if (ac == 2)
+		parse_file(&env, av[1]);
 	env.mlx = mlx_init();
 	env.win = mlx_new_window(env.mlx, WIN_W, WIN_H, "FDF femaury");
 	env.img.ptr = mlx_new_image(env.mlx, IMG_W, IMG_H);
