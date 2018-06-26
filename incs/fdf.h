@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 15:49:58 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/25 14:43:50 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/26 13:38:40 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ typedef struct	s_mlx
 {
 	void	*mlx;
 	void	*win;
+	int		file_ln;
+	int		file_sz;
 	int		**file;
 	t_img	img;
 }				t_mlx;

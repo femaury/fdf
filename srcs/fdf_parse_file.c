@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/25 13:56:17 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/25 14:46:12 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/26 13:50:44 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,16 +37,19 @@ int				parse_file(t_mlx *env, char *file)
 
 	i[0] = 0;
 	line = NULL;
-	if (!(env->file = (int **)malloc(sizeof(int *) * find_size(file))))
+	if (!(env->file_sz = find_size(file)))
+		return (1);
+	if (!(env->file = (int **)malloc(sizeof(int *) * env->file_sz)))
 		return (1);
 	fd = open(file, O_RDONLY);
 	while (ft_gnl(fd, &line) > 0)
 	{
 		coords = ft_strsplit(line, ' ');
 		size = ft_strtabsize(coords);
-		if (!(env->file[i[0]] = (int *)malloc(sizeof(int) * size)))
+		if (!size || !(env->file[i[0]] = (int *)malloc(sizeof(int) * size)))
 			return (1);
 		i[1] = 0;
+		env->file_ln = env->file_ln ? env->file_ln : size;
 		while (i[1] < size)
 		{
 			env->file[i[0]][i[1]] = ft_atoi(coords[i[1]]);
@@ -56,5 +59,6 @@ int				parse_file(t_mlx *env, char *file)
 		ft_strdel(&line);
 		i[0]++;
 	}
+	close(fd);
 	return (0);
 }
