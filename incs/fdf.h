@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 15:49:58 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/26 13:38:40 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/27 15:38:34 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,12 @@
 **	-------------------------------- STRUCTURES --------------------------------
 */
 
+typedef struct	s_point
+{
+	int		x;
+	int		y;
+}				t_point;
+
 typedef struct	s_img
 {
 	int				bpp;
@@ -54,6 +60,7 @@ typedef struct	s_mlx
 {
 	void	*mlx;
 	void	*win;
+	int		zoom;
 	int		file_ln;
 	int		file_sz;
 	int		**file;

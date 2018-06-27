@@ -6,17 +6,17 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/25 13:56:17 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/26 13:50:44 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/27 15:38:02 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-static size_t	find_size(char *file)
+static int		find_size(char *file)
 {
 	int		fd;
+	int		size;
 	char	*line;
-	size_t	size;
 
 	size = 0;
 	line = NULL;
