@@ -6,14 +6,14 @@
 #    By: femaury <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/18 20:03:09 by femaury           #+#    #+#              #
-#    Updated: 2018/06/28 12:07:49 by femaury          ###   ########.fr        #
+#    Updated: 2018/06/28 15:21:20 by femaury          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 SRC_PATH = srcs
 SRC_NAME = fdf_main.c fdf_parse_file.c fdf_key_function.c fdf_draw_grid.c \
-		   fdf_put_line.c
+		   fdf_put_line.c fdf_put_header.c
 OBJ_PATH = objs
 OBJ_NAME = $(SRC_NAME:.c=.o)
 SRC = $(addprefix $(SRC_PATH)/,$(SRC_NAME))

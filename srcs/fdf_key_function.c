@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/28 11:52:10 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/28 12:49:38 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/28 15:22:08 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ int			key_hook(int keycode, t_mlx *env)
 	modify_env(keycode, env);
 	draw_grid(env);
 	mlx_put_image_to_window(env->mlx, env->win, env->img.ptr, 0, 0);
-	mlx_string_put(env->mlx, env->win, 20, 20,
-			0xFFFFFF, "Press <ESC> to quit FDF");
+	put_header_to_window(env);
 	return (0);
 }

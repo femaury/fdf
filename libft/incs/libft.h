@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/17 15:07:51 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/23 13:30:29 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/28 14:37:02 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,7 @@ char			*ft_strncpy(char *dst, const char *src, size_t len);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 char			*ft_strchr(const char *s, int c);
+char			*ft_strchrrev(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 int				ft_strhasc(const char *s, int c);
 char			*ft_strstr(const char *haystack, const char *needle);

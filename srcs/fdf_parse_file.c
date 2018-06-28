@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/25 13:56:17 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/28 12:57:20 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/28 15:14:56 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,17 @@ static int		create_tab(t_mlx *env, int fd, int size, char *line)
 	return (0);
 }
 
+static int		check_name(char *file)
+{
+	while (*file && *file != '.')
+		file++;
+	if (!*file)
+		return (1);
+	if (ft_strcmp(file, ".fdf"))
+		return (1);
+	return (0);
+}
+
 int				parse_file(t_mlx *env, char *file)
 {
 	int		fd;
@@ -62,6 +73,8 @@ int				parse_file(t_mlx *env, char *file)
 
 	size = 0;
 	line = NULL;
+	if (check_name(file))
+		return (1);
 	if (!(env->file_sz = find_size(file)))
 		return (1);
 	if (!(env->file = (int **)malloc(sizeof(int *) * env->file_sz)))
