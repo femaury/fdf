@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 15:49:58 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/27 18:16:13 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/28 12:45:53 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,8 @@ typedef struct	s_mlx
 */
 
 int				parse_file(t_mlx *env, char *file);
+int				key_hook(int keycode, t_mlx *env);
+void			draw_grid(t_mlx *env);
+void			put_line_to_image(t_mlx *env, t_point p1, t_point p2);
 
 #endif
