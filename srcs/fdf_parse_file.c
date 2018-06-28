@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/25 13:56:17 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/28 15:14:56 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/28 17:36:52 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ static int		create_tab(t_mlx *env, int fd, int size, char *line)
 	{
 		coords = ft_strsplit(line, ' ');
 		size = ft_strtabsize(coords);
-		if (!size || !(env->file[i] = (int *)malloc(sizeof(int) * size)))
+		if (!size || (env->file_ln && size != env->file_ln)
+				|| !(env->file[i] = (int *)malloc(sizeof(int) * size)))
 			return (1);
 		j = 0;
 		env->file_ln = env->file_ln ? env->file_ln : size;
