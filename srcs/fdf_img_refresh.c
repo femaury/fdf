@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/29 12:42:43 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/29 15:08:24 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/29 15:57:14 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,15 @@ static void	modify_env(t_mlx *env)
 	else if (env->keydown == PDOWN_KEY)
 		env->height -= 0.1;
 	else if (env->keydown == PL_KEY || env->keydown == NKPL_KEY)
-		env->zoom += 5;
+		env->zoom += 1;
 	else if (env->keydown == MN_KEY || env->keydown == NKMN_KEY)
-		env->zoom -= env->zoom ? 5 : 0;
+		env->zoom -= env->zoom > 2 ? 1 : 0;
 	else if (env->keydown == UP_KEY)
 		env->pad_y += env->inverted ? 20 : -20;
 	else if (env->keydown == DOWN_KEY)
 		env->pad_y -= env->inverted ? 20 : -20;
 	else if (env->keydown == RIGHT_KEY)
-		env->pad_x -= env->inverted ? 20 :-20;
+		env->pad_x -= env->inverted ? 20 : -20;
 	else if (env->keydown == LEFT_KEY)
 		env->pad_x += env->inverted ? 20 : -20;
 	modify_color(env);
@@ -91,7 +91,7 @@ static void	set_rgb(t_mlx *env)
 	else if (env->rgb_count == 9)
 		env->color = 0xFF007F;
 	env->rgb_count++;
-	usleep(10000);
+	usleep(15000);
 }
 
 int			img_refresh(t_mlx *env)

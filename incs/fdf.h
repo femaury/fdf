@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 15:49:58 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/29 15:05:44 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/29 19:02:31 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@
 # define WIN_H 900
 # define IMG_W WIN_W
 # define IMG_H WIN_H
+# define MAX_FILESIZE 10000000
 
 /*
 **	-------------------------------- STRUCTURES --------------------------------
@@ -74,6 +75,7 @@ typedef struct	s_mlx
 	int		rgb;
 	int		rgb_count;
 	int		inverted;
+	int		error;
 	t_img	img;
 }				t_mlx;
 
@@ -82,7 +84,6 @@ typedef struct	s_mlx
 */
 
 int				parse_file(t_mlx *env, char *file);
-int				key_hook(int keycode, t_mlx *env);
 int				hook_keydown(int keycode, t_mlx *env);
 int				hook_keyup(int keycode, t_mlx *env);
 int				img_refresh(t_mlx *env);
