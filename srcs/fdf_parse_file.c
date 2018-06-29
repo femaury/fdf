@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/25 13:56:17 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/28 17:36:52 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/29 12:31:40 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int				parse_file(t_mlx *env, char *file)
 	line = NULL;
 	if (check_name(file))
 		return (1);
+	env->win_name = ft_strjoin("FDF ", ft_strchrrev(file, '/'));
 	if (!(env->file_sz = find_size(file)))
 		return (1);
 	if (!(env->file = (int **)malloc(sizeof(int *) * env->file_sz)))

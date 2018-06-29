@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 15:49:58 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/28 18:17:55 by femaury          ###   ########.fr       */
+/*   Updated: 2018/06/29 15:05:44 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ typedef struct	s_mlx
 	void	*mlx;
 	void	*win;
 	void	*header;
+	char	*win_name;
 	float	height;
 	int		pad_x;
 	int		pad_y;
@@ -68,7 +69,11 @@ typedef struct	s_mlx
 	int		file_ln;
 	int		file_sz;
 	int		**file;
+	int		keydown;
 	int		color;
+	int		rgb;
+	int		rgb_count;
+	int		inverted;
 	t_img	img;
 }				t_mlx;
 
@@ -80,6 +85,7 @@ int				parse_file(t_mlx *env, char *file);
 int				key_hook(int keycode, t_mlx *env);
 int				hook_keydown(int keycode, t_mlx *env);
 int				hook_keyup(int keycode, t_mlx *env);
+int				img_refresh(t_mlx *env);
 void			draw_grid(t_mlx *env);
 void			put_line_to_image(t_mlx *env, t_point p1, t_point p2);
 void			put_header_to_window(t_mlx *env);
