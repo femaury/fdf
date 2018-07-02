@@ -26,7 +26,7 @@ static void	put_line_vertical(t_mlx *env, t_point p1, t_point p2)
 	while (p1.y != p2.y)
 	{
 		if (p1.x >= 0 && p1.x < WIN_W && p1.y >= 0 && p1.y < WIN_H)
-			env->img.data[p1.y * WIN_W + p1.x] = env->color;
+			env->img.data[p1.y * WIN_W + p1.x] = env->color + (env->altitude * 0x900000);
 		error += deltaerr;
 		while (error > 0.5)
 		{
@@ -52,7 +52,7 @@ void		put_line_to_image(t_mlx *env, t_point p1, t_point p2)
 		while (p1.x != p2.x)
 		{
 			if (p1.x >= 0 && p1.x < WIN_W && p1.y >= 0 && p1.y < WIN_H)
-				env->img.data[p1.y * WIN_W + p1.x] = env->color;
+				env->img.data[p1.y * WIN_W + p1.x] = env->color + (env->altitude * 0x900000);
 			error += deltaerr;
 			while (error > 0.5)
 			{

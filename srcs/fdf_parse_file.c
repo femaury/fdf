@@ -73,7 +73,7 @@ int				parse_file(t_mlx *env, char *file)
 
 	size = 0;
 	line = NULL;
-	env->win_name = ft_strjoin("FDF ", ft_strchrrev(file, '/'));
+	env->win_name = ft_strjoin("FDF - ", ft_strchrrev(file, '/'));
 	if (!(env->file_sz = find_size(env, file)))
 		return (1);
 	if (!(env->file = (int **)malloc(sizeof(int *) * env->file_sz)))

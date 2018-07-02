@@ -75,6 +75,7 @@ typedef struct	s_mlx
 	int		rgb;
 	int		rgb_count;
 	int		inverted;
+	int		altitude;
 	int		error;
 	t_img	img;
 }				t_mlx;

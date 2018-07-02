@@ -27,6 +27,7 @@ static void	init_env(t_mlx *env)
 	env->file_sz = 0;
 	env->file = NULL;
 	env->color = 0xFFFFFF;
+	env->altitude = 0;
 }
 
 static int	click_close(t_mlx *env)

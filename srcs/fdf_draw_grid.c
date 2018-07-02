@@ -19,6 +19,7 @@ static t_point	get_coords(t_mlx *env, int i, int j)
 	p.x = ((j - i) * env->zoom) + env->pad_x;
 	p.y = (((i + j) - env->file[i][j] * env->height) * (env->zoom / 2))
 		+ env->pad_y;
+	env->altitude = env->file[i][j];
 	return (p);
 }
 
