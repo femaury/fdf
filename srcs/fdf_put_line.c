@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/28 12:02:31 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/28 16:45:59 by femaury          ###   ########.fr       */
+/*   Updated: 2018/07/03 17:56:58 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	put_line_vertical(t_mlx *env, t_point p1, t_point p2)
 	while (p1.y != p2.y)
 	{
 		if (p1.x >= 0 && p1.x < WIN_W && p1.y >= 0 && p1.y < WIN_H)
-			env->img.data[p1.y * WIN_W + p1.x] = env->color + (env->altitude * 0x900000);
+			env->img.data[p1.y * WIN_W + p1.x] = env->color;
 		error += deltaerr;
 		while (error > 0.5)
 		{
@@ -52,7 +52,7 @@ void		put_line_to_image(t_mlx *env, t_point p1, t_point p2)
 		while (p1.x != p2.x)
 		{
 			if (p1.x >= 0 && p1.x < WIN_W && p1.y >= 0 && p1.y < WIN_H)
-				env->img.data[p1.y * WIN_W + p1.x] = env->color + (env->altitude * 0x900000);
+				env->img.data[p1.y * WIN_W + p1.x] = env->color;
 			error += deltaerr;
 			while (error > 0.5)
 			{

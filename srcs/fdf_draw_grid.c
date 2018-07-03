@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/28 12:06:11 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/28 16:51:38 by femaury          ###   ########.fr       */
+/*   Updated: 2018/07/03 17:57:06 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static t_point	get_coords(t_mlx *env, int i, int j)
 	p.x = ((j - i) * env->zoom) + env->pad_x;
 	p.y = (((i + j) - env->file[i][j] * env->height) * (env->zoom / 2))
 		+ env->pad_y;
-	env->altitude = env->file[i][j];
 	return (p);
 }
 

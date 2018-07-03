@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/21 14:56:14 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/29 18:56:33 by femaury          ###   ########.fr       */
+/*   Updated: 2018/07/03 17:57:22 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ static void	init_env(t_mlx *env)
 	env->file_sz = 0;
 	env->file = NULL;
 	env->color = 0xFFFFFF;
-	env->altitude = 0;
 }
 
 static int	click_close(t_mlx *env)

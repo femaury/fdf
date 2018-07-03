@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/29 12:42:43 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/29 15:57:14 by femaury          ###   ########.fr       */
+/*   Updated: 2018/07/03 18:08:14 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static void	set_rgb(t_mlx *env)
 	else if (env->rgb_count == 9)
 		env->color = 0xFF007F;
 	env->rgb_count++;
-	usleep(15000);
+//	usleep(15000);
 }
 
 int			img_refresh(t_mlx *env)

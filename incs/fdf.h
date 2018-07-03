@@ -6,7 +6,7 @@
 /*   By: femaury <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/09 15:49:58 by femaury           #+#    #+#             */
-/*   Updated: 2018/06/29 19:02:31 by femaury          ###   ########.fr       */
+/*   Updated: 2018/07/03 17:57:31 by femaury          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ typedef struct	s_mlx
 	int		rgb;
 	int		rgb_count;
 	int		inverted;
-	int		altitude;
 	int		error;
 	t_img	img;
 }				t_mlx;
